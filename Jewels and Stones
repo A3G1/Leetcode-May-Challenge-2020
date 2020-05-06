@@ -1,0 +1,21 @@
+class Solution {
+public:
+    int numJewelsInStones(string J, string S) {
+        
+        int count=0;
+        for(int i=0;i<J.length();i++)
+        {
+                /*if((J.at(i)=='a' || J.at(i)=='A' ) && (J.at(i)=='z' || J.at(i)=='Z'))*/ //You can use it in case of case sensitivity
+                    for(int x=0;x<S.length();x++)
+                    {
+                        if(J[i]==S[x])
+                        {
+                            count++;
+                        }
+                    }
+                
+            
+        }
+        return count;
+    }
+};

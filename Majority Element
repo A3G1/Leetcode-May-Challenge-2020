@@ -1,0 +1,29 @@
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        vector<int>::iterator i;
+        vector<int>::iterator j;
+        int temp=nums.size();
+        int temp1=temp/2;
+        for(i=nums.begin();i < nums.end().i++)
+        {
+            if (temp==1) 
+            cout<<nums[0];;
+            
+            int count=1;
+            for(j=nums.begin()+1;j < nums.end();j++)
+            {
+                if(nums[i]==nums[j])
+                {
+                    count++;
+                }
+            }
+            if(count>temp1)
+            {
+                cout<<nums[i];
+            }
+        
+        }
+        return 0;
+    }
+};

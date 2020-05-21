@@ -1,0 +1,14 @@
+class Solution {
+public:
+  int kthSmallest(TreeNode* root, int k) {
+    return inorder(root, k);
+  }
+private:
+  int inorder(TreeNode* root, int& k) {
+    if (!root) return -1;
+    int x = inorder(root->left, k);
+    if (k == 0) return x;
+    if (--k == 0) return root->val;
+    return inorder(root->right, k);
+  }
+};
